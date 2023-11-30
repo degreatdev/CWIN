@@ -787,6 +787,10 @@ video {
   width: 100%;
 }
 
+.w-\[5rem\] {
+  width: 5rem;
+}
+
 .max-w-\[1600px\] {
   max-width: 1600px;
 }
@@ -1201,6 +1205,12 @@ npx tailwindcss -i ./input.css -o ./dist/output.css --watch */
 
   .max-md\:w-\[60px\] {
     width: 60px;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:max-w-\[1600px\] {
+    max-width: 1600px;
   }
 }
 
