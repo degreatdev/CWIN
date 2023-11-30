@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @utilities {
+  nav {
+    @apply w-full h-[80px] bg-white z-[99] sticky top-0 relative;
+  }
+  .navbar-wrapper {
+    @apply flex w-full h-[80px] max-h-[80px] items-center flex-row px-[120px];
+  }
+  .navbar-image {
+    @apply max-md:w-[60px] max-md:h-[40px] max-md:ml-[6px];
+  }
+  .navbar {
+    @apply flex flex-grow items-center w-full h-full flex-row justify-between  lg:pl-[120px] nav-wrapper pb-[20px] md:pb-0;
+  }
+  .navbar-menu {
+    @apply nav-links flex flex-grow items-center w-full h-full flex-row pt-[20px] md:pt-0 pb-[10px] md:pb-0;
+  }
+} */
+/* ./*.{html,js}
+npx tailwindcss -i ./input.css -o ./dist/output.css --watch */

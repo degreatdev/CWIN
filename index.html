@@ -6,127 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>CWIN</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" type="text/css" href="./dist/output.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./assets/images/logo.ico">
     <link rel="stylesheet" type="text/css" href="./assets/style/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Poppins:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;900&family=Poppins:wght@200;300;400;500;600;700;800&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/style/query.css"/>
+   
 </head>
 <body class="w-full relative">
     <div class="w-full main">
-            <nav class="h-[80px] z-30 " id="nav-bar">
-                <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" class="logo" ></a>
-                <div class="nav-links " id="menu">
-                <h6 class="links"><a href="#">Hire Writers</a></h6>
-                <h6 class="links"><a href="#">Become a Seller</a></h6>
-                <h6 class="links"><a href="#">Marketplace</a></h6>
-                <h6 class="links"><a href="#">Blog</a></h6>
-                <h6 class="links"><a href="#">FAQ's</a></h6>
-                <h6 class="links"><a href="#">Contact Us</a></h6>
+        <nav class="w-full h-[80px] bg-white z-[99] sticky top-0 relative" id="nav-bar">
+            <div class="navbar-wrapper flex w-full h-[80px] max-h-[80px] max-w-[1600px] mx-auto items-center flex-row px-[92px] nav-maindiv ">
+                <div>
+                    <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" class="logo navbar-image max-md:w-[60px] max-md:h-[40px] max-md:ml-[6px]" ></a>
                 </div>
 
-                <div class="nav-btn">
+                <div class="navbar flex flex-grow gap-5 items-center w-full h-full flex-row justify-between  nav-wrapper pb-[20px] md:pb-0">
+                    <!-- <div class="nav-links flex flex-grow items-center w-full h-full flex-row " id="menu"> -->
+                    <div class="navbar-menu nav-links flex flex-grow items-center w-full h-full flex-row pt-[20px] md:pt-0 pb-[10px] md:pb-0 ">
+                        <ul class="flex space-x-3 md:space-x-9 space-y-2  md:space-y-0  text-xl md:text-md lg:pl-[140px]"> 
+                            <li class="links"><a href="#">Hire Writers</a></li>
+                            <li class="links"><a href="#">Become a Seller</a></li>
+                            <li class="links"><a href="#">Marketplace</a></li>
+                            <li class="links"><a href="#">Blog</a></li>
+                            <li class="links"><a href="#">FAQ's</a></li>
+                            <li class="links"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="nav-btn max-md:hidden">
+                        <button class="btn-1 bg-white btn-col hover:border-[3px] hover:border-blue-700 hover:bg-transparent transition ease-in-out delay-0"><a href="/src/signin.html">Login</a></button>
+                        <button class="btn-1 btn-col-1 hover:shadow-lg transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150">Sign Up</button>
+                    </div>
+    
+                </div>
+                <div id='toggler' class="expander-wrapper w-full h-full flex items-center md:hidden"><i class="uil uil-bars mr-[10px] md:mr-0 text-xl block md:hidden text-[2.8em]" id="nav-icon"></i></div>  
+            </div>
+        </nav>
+
+            <!-- <nav class="h-[80px] z-30 max- md:w-full" id="nav-bar">
+                <a href="./index.html"><img src="./assets/images/logo.png" alt="logo" class="logo max-md:w-[60px] max-md:h-[40px] max-md:ml-[6px]" ></a>
+                <div class="nav-links " id="menu">
+                    <ul class="flex space-x-3 max-md:hidden">
+                        <li class="links"><a href="#">Hire Writers</a></li>
+                        <li class="links"><a href="#">Become a Seller</a></li>
+                        <li class="links"><a href="#">Marketplace</a></li>
+                        <li class="links"><a href="#">Blog</a></li>
+                        <li class="links"><a href="#">FAQ's</a></li>
+                        <li class="links"><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-btn max-md:hidden">
                     <button class="btn-1 bg-white btn-col hover:border-[3px] hover:border-blue-700 hover:bg-transparent transition ease-in-out delay-0">Login</button>
                     <button class="btn-1 btn-col-1 hover:shadow-lg transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150">Sign Up</button>
                 </div>
-               </nav>
 
-                <div class="header w-full h-[722px] overflow-hidden">
-                    <div class="w-full h-full relative">
-                        <div class="w-[588px] h-[350px] absolute z-20 top-[185.5px] left-[120px]">
-                            <div class="header-text">
-                                <div class="header-box w-[287px] h-[34px] rounded-[90px] bg-white py-[3px]">Content Creating Agency</div>
+                <div><i class="uil uil-bars mr-[10px] md:mr-0 text-xl hidden max-md:block"></i></div>
+               </nav> -->
+
+                <div class="w-full h-[722px] overflow-hidden">
+                    <div class="w-full h-full relative pt-[80px]">
+                        <div class="w-auto h-auto absolute z-20 pt-[80px] flex flex-col gap-[30px] pl-[4rem] header-content">
+                            <div class="header-text flex flex-col">
+                                <div class="header-box w-auto h-auto rounded-[90px] bg-white py-[3px]">Content Creating Agency</div>
                                 <h3 class="header-text-1">We have the best content writers ready for you</h3>
-                                <p class="header-text-2">Receive article writing services from a pool of knowledgeable, competent, and skilled authors.</p>
+                                <p class="header-text-2 w-auto">Receive article writing services from a pool of knowledgeable, competent, and skilled authors.</p>
                             </div>
                             
-                            <button class="header-box-2 w-[202px] h-[50px] rounded-[20px] py-[10px] hover:shadow-lg transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150"><a href="#">Sign Up For Free</a></button>
+                            <div class="header-box-2 w-[202px] h-[50px] rounded-[20px] py-[10px] hover:shadow-lg transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150">
+                                <a href="#">Sign Up For Free</a>
+                            </div>
                         </div>
-                        <div class="header-img w-full h-[722px] absolute z-10"></div>
-                        <img src="./assets/images/headerimg.png" class="w-full overflow-hidden"/>
+                        <div class="w-auto h-full header-img"></div>
                     </div>
                 </div>
 
-                <div class="section w-full h-full">
-                    <div class="w-full h-[694px]">
-                        <div class="w-full h-[120px] article-box">
+                
+                    <div class="w-full h-[694px] article px-[4rem]">
+                        <div class="w-full h-auto article-box">
                             <h3 class="article-header">Creation According To Industries</h3>
                             <p class="article-text">Regardless of your industry, we can find skilled writers for you.</p>
                         </div>
 
-                        <div class="w-full h-[572px] article-box-2 mt-[50px]">
-                            <div class="grid grid-cols-4 gap-[68px] w-full">
-                                <div class="w-[285px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col gap-2 article-box-3">
+                        <div class="w-full article-box-2 mt-[50px]">
+                            <div class="article-row w-full">
+                                <div class="w-[282px] box-list h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-megaphone text-lg"></i></div>
-                                    <h5 class="article-text-2">Marketing & Advertising</h5>
+                                    <div><h5 class="article-text-2">Marketing & Advertising</h5></div>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col gap-2 article-box-3">
+                                <div class="w-[282px] h-[138px] box-list rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-pricetag-alt"></i></div>
                                     <h5 class="article-text-2">E-commerce & Retail</h5>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] box-list rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-server"></i></div>
                                         <h5 class="article-text-2">Technology & Software</h5>
                                     </div>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-medical-square-full"></i></div>
                                         <h5 class="article-text-2">Healthcare</h5>
                                     </div>
                                 </div>
 
-                                <div class="w-[285px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col gap-2 article-box-3">
+                                <div class="w-[285px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-megaphone"></i></div>
                                     <h5 class="article-text-2">Marketing & Advertising</h5>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col gap-2 article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-pricetag-alt"></i></div>
                                     <h5 class="article-text-2">E-commerce & Retail</h5>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-server"></i></div>
                                         <h5 class="article-text-2">Technology & Software</h5>
                                     </div>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-medical-square-full"></i></div>
                                     <h5 class="article-text-2">Healthcare</h5>
                                     </div>
                                 </div>
 
-                                <div class="w-[285px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col gap-2 article-box-3">
+                                <div class="w-[285px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-megaphone"></i></div>
                                     <h5 class="article-text-2">Marketing & Advertising</h5>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col gap-2 article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[34px] flex items-center text-center flex-col article-box-3">
                                     <div><i class="uil uil-pricetag-alt"></i></div>
                                     <h5 class="article-text-2">E-commerce & Retail</h5>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-server"></i></div>
                                     <h5 class="article-text-2">Technology & Software</h5>
                                     </div>
                                 </div>
 
-                                <div class="w-[282px] h-[138px] rounded-[20px] cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
+                                <div class="w-[282px] h-[138px] rounded-[20px] box-list cursor-pointer transition ease-in-out delay-75 hover:-translate-y-0 hover:scale-105 duration-150 py-[12px] px-[24px] flex items-center text-center flex-col article-box-3">
                                     <div class="flex flex-col mt-[2px] gap-[7px]">
                                         <div><i class="uil uil-medical-square-full"></i></div>
                                         <h5 class="article-text-2">Healthcare</h5>
@@ -138,37 +175,37 @@
                         </div>
                     </div>
 
-                    <div class="w-full h-[1452px] article mt-[52px]">
-                        <div class="w-full h-[120px] article-box">
+                    <div class="w-full h-auto pb-14">
+                        <div class="w-full h-auto pb-8 pl-5">
                             <h3 class="article-header">Why choose us?</h3>
                             <p class="article-text">Steps to ensure high-quality and engaging content.</p>
                         </div>
 
-                        <div class="w-full h-[1225px] article-box-2 mt-[50px] flex flex-col gap-[67px]">
-                            <div class="w-full h-[340px] article-box-4 ">
-                                <div class="w-[484px] h-[190px] flex flex-col gap-[10px] self-center">
+                        <div class="w-full h-auto flex flex-col gap-[67px]">
+                            <div class="w-full h-auto article-box-4">
+                                <div class=" h-auto lg:w-auto flex flex-col gap-[10px] self-center">
                                     <h5 class="list-article-header">Quickly Access Content</h5>
-                                    <p class="list-article-text">Among the numerous talented users on our platform, there is always a qualified writer available for rent. 
+                                    <p class="list-article-text pt-3 md:w-[30rem]">Among the numerous talented users on our platform, there is always a qualified writer available for rent. 
                                         For your content projects, time-consuming author searches and missed deadlines are the past. 
                                         You may focus entirely on your most crucial responsibilities because of the time we save you by providing article 
                                         writing services.
                                     </p>
                                 </div>
 
-                                <div class="h-full w-[487px] overflow-hidden">
+                                <div class="h-full w-[487px] list-img img-first overflow-hidden">
                                     <img src="./assets/images/illustration 1.png" alt="">
                                 </div>
 
                             </div>
 
-                            <div class="w-full h-[370px] article-box-4 ">
-                                <div class="h-full w-[487px] overflow-hidden rounded-[20px]">
+                            <div class="w-full h-auto article-box-4 ">
+                                <div class="h-full w-[487px] list-img overflow-hidden rounded-[20px]">
                                     <img src="./assets/images/illustration 2.png" alt="">
                                 </div>
 
-                                <div class="w-[480px] h-[180px] flex flex-col gap-[10px] self-center">
+                                <div class="w-auto h-auto flex flex-col gap-[10px] self-center">
                                     <h5 class="list-article-header">Improve SEO With Original Written Content</h5>
-                                    <p class="list-article-text">Easily add your target keywords to our order dashboard. 
+                                    <p class="list-article-text lg:pr-3 md:w-[30rem]">Easily add your target keywords to our order dashboard. 
                                         You can also rely on our plagiarism check. 
                                         Tools like these will provide you with unique and optimized copy that search engines reward with better rankings.
                                     </p>
@@ -176,15 +213,15 @@
 
                             </div>
 
-                            <div class="w-full h-[370px] article-box-4 ">
-                                <div class="w-[480px] h-[180px] flex flex-col gap-[10px] self-center">
+                            <div class="w-full h-auto article-box-4 ">
+                                <div class="w-auto h-auto flex flex-col gap-[10px] self-center">
                                     <h5 class="list-article-header">Translation in bulk in Many Languages</h5>
-                                    <p class="list-article-text">Easily add your target keywords to our order dashboard. You can also rely on our plagiarism check. 
+                                    <p class="list-article-text pt-3 md:w-[30rem]">Easily add your target keywords to our order dashboard. You can also rely on our plagiarism check. 
                                         Tools like these will provide you with unique and optimized copy that search engines reward with better rankings.
                                     </p>
                                 </div>
 
-                                <div class="h-full w-[487px] overflow-hidden rounded-[20px]">
+                                <div class="h-full w-[487px] list-img img-first overflow-hidden rounded-[20px]">
                                     <img src="./assets/images/illustration 3.png" alt="">
                                 </div>
                             </div>
@@ -194,13 +231,13 @@
                         </div>
 
 
-                        <div class="w-full  h-[580px] article mt-[55px]">
+                        <!-- <div class="w-full  h-[580px] article mt-[55px]">
                             <div class="w-full h-[120px] article-box">
                                 <h3 class="article-header">How Does it Work?</h3>
                                 <h3 class="article-text">Steps to ensure high-quality and engaging content.</h3>
                             </div>
     
-                            <div class="w-full h-[270px] mt-[50px] flex flex-row  gap-[67px] ">
+                            <div class="w-full h-[270px] mt-[50px] flex flex-row flex-wrap  gap-[45px] ">
 
                                 <div class="w-[222px] h-full rounded-[5px] category-box">
                                     <div class="w-[122px] h-auto flex flex-col gap-[12px] mt-[55px] ml-[50px]">
@@ -241,7 +278,7 @@
                                     
                                 </div>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
 
@@ -472,10 +509,10 @@
                     </div>
                             </div>
 
-                            <div class="w-full h-[350px]  px-[120px] py-[50px] mt-[100px] subscribe-banner">
+                            <!-- <div class="w-full h-[350px]  px-[120px] py-[50px] mt-[100px] subscribe-banner">
                             
-                                <div class="w-full h-full  subscribe-banner-2 flex flex-row align-center justify-center rounded-[15px]">
-                                    <div class="flex h-auto w-[982px]  gap-x-[20px] pt-[5px] pb-[5px] subscribe-banner-3">
+                                <div class="w-full h-full  subscribe-banner-2 flex flex-row  align-center justify-center rounded-[15px]">
+                                    <div class="flex flex-wrap h-auto w-[982px]  gap-x-[20px] pt-[5px] pb-[5px] subscribe-banner-3">
                                         <h3 class="text-left subscribe-header">Subscribe To Our Newsletter</h3>
 
                                         <form action="" class="flex gap-[15px] h-[66px]">
@@ -484,7 +521,7 @@
                                         </form>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                             <div class="w-full h-[469px] border-2 border-black px-[120px] py-[50px] mt-[100px] footer">
@@ -497,7 +534,7 @@
 
                         </div>
 
-                    </div>
+                    
 
                 </div>
                
