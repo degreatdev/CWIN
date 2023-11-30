@@ -152,6 +152,9 @@
     padding: 55px 12px 0 0;
     height: auto;
   }
+  .article-list-box{
+    padding-left: 1rem;
+  }
   
 }
 @media (min-width:431px) and (max-width:640px){
