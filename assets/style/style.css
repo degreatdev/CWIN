@@ -291,7 +291,7 @@ nav div ul * {
 .article-row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 5em;
     gap: 2rem;
 }
 .article-header {
@@ -368,8 +368,8 @@ nav div ul * {
 
 .icon-box {
   background-color: rgba(166, 166, 255, 0.5);
-  margin-top: 10px;
-  margin-left: 8px;
+  /* margin-top: 10px;
+  margin-left: 8px; */
 }
 
 .icon {
@@ -403,6 +403,14 @@ nav div ul * {
     rgb(173, 173, 255) 30.65%,
     rgb(63, 63, 228)
   );
+}
+
+.banner-bottom-content{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
 }
 
 .banner-header {
